@@ -1,0 +1,34 @@
+<html>
+
+<head>
+	<title>LCG Example</title>
+    <body>
+		<script>
+            
+			//Two prime numbers
+			var a = 7723;
+            var c = 7919;
+
+			//m is the 'multiplier', output will be between 0 and m
+            var m = 255;
+
+            //initial seed of the function, can be any integer
+            var z = 4024;
+
+            var rand = function()
+            {
+                //pseudo random formula
+                z = (a * z + c) % m;
+                return z;
+            };
+
+            for(i = 0; i < 20; i++)
+            {
+                document.write(rand() + ",");
+            }
+
+        </script>
+    </body>
+</head>
+
+</html>
